@@ -1,0 +1,18 @@
+{
+  "name": "ziwei-doushu-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "紫微斗数排盘（倪海厦体系）本地引擎，供 WorkBuddy Skill 调用",
+  "type": "module",
+  "scripts": {
+    "chart": "tsx scripts/chart.ts"
+  },
+  "dependencies": {
+    "iztro": "^2.5.8",
+    "lunar-javascript": "^1.7.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
