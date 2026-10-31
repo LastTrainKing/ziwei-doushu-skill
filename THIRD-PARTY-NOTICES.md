@@ -10,7 +10,7 @@
 - 许可证：MIT License
 - 版权：Copyright (c) 2026 紫微研究
 
-本仓库使用范围：`scripts/engine/` 下全部文件（19 个），仅做了两处适配性删改：
+本仓库使用范围：`scripts/engine/` 下全部文件（18 个），仅做了两处适配性删改：
 
 1. 未包含依赖 React 的 `history.ts`、`share.ts`，以及含名人命盘的 `famous.ts`
 2. 删除 `patterns.ts` 顶部的 `import 'server-only'`（该包在纯 Node 环境下会主动抛错）
