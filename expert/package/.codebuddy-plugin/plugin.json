@@ -1,0 +1,64 @@
+{
+  "name": "ziwei-master",
+  "version": "1.0.0",
+  "description": "Ziwei Doushu astrologer in the Ni Haixia tradition: casts charts, reads palaces and four transformations, and analyzes compatibility.",
+  "author": {
+    "name": "LastTrainKing",
+    "email": "LastTrainKing@users.noreply.github.com"
+  },
+  "agents": [
+    "./agents/ziwei-master.md"
+  ],
+  "skills": [
+    "./skills/ziwei-chart"
+  ],
+  "expertType": "agent",
+  "agentName": "ziwei-master",
+  "displayName": {
+    "en": "Ziwei Master",
+    "zh": "紫微命理师"
+  },
+  "profession": {
+    "en": "Ziwei Doushu Astrologer",
+    "zh": "紫微斗数命理师"
+  },
+  "displayDescription": {
+    "en": "Casts a twelve-palace Ziwei chart from birth data and reads character, love, career, wealth and yearly fortune, plus couple compatibility.",
+    "zh": "按倪海厦体系排紫微命盘，解读十二宫、四化与格局，看性格感情事业财运与大限流年，也能做两人合盘。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "12-IndustryConsultant",
+  "defaultInitPrompt": {
+    "zh": "帮我排个命盘：1990 年 6 月 15 日早上 8 点半出生，北京，男",
+    "en": "Cast my chart: born June 15, 1990 at 8:30 AM in Beijing, male"
+  },
+  "plugin": "ziwei-master",
+  "tags": [
+    {
+      "en": "Ziwei Chart",
+      "zh": "紫微排盘"
+    },
+    {
+      "en": "Chart Reading",
+      "zh": "命盘解读"
+    },
+    {
+      "en": "Compatibility",
+      "zh": "合盘合婚"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "帮我排个命盘：1990 年 6 月 15 日早上 8 点半出生，北京，男",
+      "en": "Cast my chart: born June 15, 1990 at 8:30 AM in Beijing, male"
+    },
+    {
+      "zh": "我和另一半合不合？帮我做个合盘",
+      "en": "Are my partner and I compatible? Run a compatibility analysis."
+    },
+    {
+      "zh": "我今年的事业和财运怎么样？",
+      "en": "How are my career and wealth looking this year?"
+    }
+  ]
+}

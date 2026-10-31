@@ -10,3 +10,6 @@ Thumbs.db
 
 *.tsbuildinfo
 .next/
+
+# 专家包构建产物
+expert/dist/

@@ -113,18 +113,23 @@ npx tsx scripts/heming.ts --a-date 1990-06-15 --a-time 08:30 --a-city 北京 --a
 
 ## 作为 Expert 使用
 
-如果想把排盘包装成一个带人设的专家，把本仓库复制进专家包的 `skills/` 目录，再在 `plugin.json` 里声明即可：
+仓库里已经带了一个现成的专家包模板：`expert/`。一条命令构建：
 
-```json
-{
-  "agents": ["./agents/ziwei-master.md"],
-  "skills": ["./skills/ziwei-chart"],
-  "expertType": "agent",
-  "agentName": "ziwei-master"
-}
+```bash
+node expert/build.mjs
 ```
 
-Agent 的 frontmatter 里加 `skills: [ziwei-chart]` 就会在启动时预加载。
+产物 `expert/dist/ziwei-master/` 是完整的 Agent 型专家包——人设「明微」+ 内置 `ziwei-chart` 技能 + 头像。复制到专家目录再跑一次注册脚本即可：
+
+```bash
+# 1. 复制（Windows 配置目录是 C:\Users\<你>\.workbuddy-ai，其他平台是 ~/.workbuddy）
+cp -r expert/dist/ziwei-master <配置目录>/plugins/marketplaces/my-experts/plugins/
+
+# 2. 注册（脚本在 expert-manager 技能内）
+python scripts/register_expert.py <上面的 ziwei-master 路径>
+```
+
+打开 **专家中心 → 我的专家**，就能看到「紫微命理师」。人设、标签、头像怎么改，见 [expert/README.md](./expert/README.md)。
 
 ## 目录结构
 
@@ -137,9 +142,13 @@ Agent 的 frontmatter 里加 `skills: [ziwei-chart]` 就会在启动时预加载
 │   ├── heming.ts                合盘 CLI
 │   ├── birth.ts                 公共逻辑（解析 → 命盘）
 │   └── engine/                  排盘引擎（源自上游，MIT）
-└── references/
-    ├── interpretation.md        十二宫 / 主星 / 四化 / 格局 / 大限流年
-    └── heming.md                合盘五步法 / 婚期 / 凶语转译
+├── references/
+│   ├── interpretation.md        十二宫 / 主星 / 四化 / 格局 / 大限流年
+│   └── heming.md                合盘五步法 / 婚期 / 凶语转译
+└── expert/
+    ├── build.mjs                一键构建专家包
+    ├── package/                 专家模板（人设、plugin.json、头像）
+    └── README.md                构建与安装说明
 ```
 
 ## 口径说明
